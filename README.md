@@ -109,7 +109,7 @@ flipbook path/to/images -o my_animation.gif -d 5
 
 ## License
 
-MIT License
+[MIT LICENSE](LICENSE) 
 
 ## Contributing
 
