@@ -2,5 +2,13 @@
 name = "flipbook-rs"
 version = "0.1.0"
 edition = "2024"
+authors = ["Katsuhiro Honda <freewave3@gmail.com>"]
+description = "Convert JPG pages in a directory (sorted by timestamp) into a single GIF flipbook"
+license = "MIT"
+repository = "https://github.com/katsuhirohonda/flipbook-rs"
 
 [dependencies]
+clap = { version = "4", features = ["derive"] }
+image = "0.24"
+gif = "0.12"
+anyhow = "1.0"
