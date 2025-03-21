@@ -27,6 +27,18 @@ struct Args {
 ///
 /// * `anyhow::Error` - If the program cannot be run
 fn main() -> Result<()> {
+    // 引数がない場合はヘルプを表示して終了
+    if std::env::args().len() <= 1 {
+        Args::parse_from(
+            vec![
+                std::env::args().next().unwrap_or_default(),
+                "--help".to_string(),
+            ]
+            .iter(),
+        );
+        return Ok(());
+    }
+
     let args = Args::parse();
     let mut files: Vec<_> = fs::read_dir(&args.dir)?
         .filter_map(Result::ok)
